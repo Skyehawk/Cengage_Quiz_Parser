@@ -20,7 +20,7 @@ qSr = pd.Series(lines)
 # --- Map each line of inut file to new row in Pandas dataframe ---
 curQPos = np.zeros(qSr.size)
 pHList = curQPos
-for q in np.arange(17,66):							# horrible looping inefficency grossness
+for q in np.arange(10,99):							# horrible looping inefficency grossness
 	curQPos = map(sum, zip(curQPos,qSr.str.contains(pat = str(q) + '.\\xa0')))
 
 # --- Identify rows that are questions, parse answer info for subsequent rows, 
