@@ -47,8 +47,8 @@ for q in qNp:
 	rowHeads = ["//MULTIPLE CHOICE QUESTION TYPE","//Options must include text in column3",
 			"NewQuestion","ID","Title","QuestionText","Points","Difficulty","Image",
 			"Option","Option","Option","Option","Option","Hint","Feedback",""]
-	w = np.array(["","","MC","GEOG2250","Chapter"+str(args.chapter)+"-" + str(i),q[1],"1","1","",[0,1][q[2]=="a"],[0,1][q[2]=="b"],
-				[0,1][q[2]=="c"],[0,1][q[2]=="d"],[0,1][q[2]=="e"],"","",""])
+	w = np.array(["","","MC","GEOG2250","Chapter"+str(args.chapter)+"-" + str(i),q[1],"1","1","",[0,100][q[2]=="a"],[0,100][q[2]=="b"],
+				[0,100][q[2]=="c"],[0,100][q[2]=="d"],[0,100][q[2]=="e"],"","",""])
 	x = np.array(["","","","","","","","","",q[4],q[5],q[6],q[7],q[8],"","",""])
 	z = np.vstack((rowHeads,(np.vstack((w.T,x.T))))).T
 	qToCSV = np.vstack((qToCSV,z))
